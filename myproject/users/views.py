@@ -43,7 +43,7 @@ class UserDetails(APIView):
     permission_classes = (IsAuthenticated,)
     def put(self, request, pk=0, *args, **kwargs):
         user = User.objects.get(id=pk)
-        updateUser = UserSerializer(user, data=request.data)
+        updateUser = UserSerializerPerfil(user, data=request.data)
         if updateUser.is_valid():
             user = updateUser.save()
             user.save()

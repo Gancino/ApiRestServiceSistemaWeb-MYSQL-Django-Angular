@@ -6,6 +6,6 @@ from rest_framework.views import APIView
 class IndexView(APIView):
     def get(self, request, format=None):
         content = {
-            'wmsg': 'Welcome to Full Stack Developmemnt'
+            'msg': 'Bienevenido al desarrollo Full Stack'
         }
         return Response(content)
